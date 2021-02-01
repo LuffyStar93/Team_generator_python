@@ -1,45 +1,37 @@
 {
     "0": [
-        "Adlane",
-        "Maria"
-    ],
-    "1": [
-        "Bernard",
-        "Farouk B"
-    ],
-    "2": [
-        "Jordan T",
-        "Bart"
-    ],
-    "3": [
-        "Mohammed",
-        "Tiphaine"
-    ],
-    "4": [
-        "Jordan D",
-        "Thibault"
-    ],
-    "5": [
-        "Carina",
-        "Biben"
-    ],
-    "6": [
         "Joshua",
-        "Souad"
-    ],
-    "7": [
-        "Maxime",
-        "Morjane"
-    ],
-    "8": [
-        "Marwa",
-        "Farouk E"
-    ],
-    "9": [
-        "Mouny",
+        "Souad",
         "Rachid"
     ],
-    "10": [
-        "Youcef"
+    "1": [
+        "Mohammed",
+        "Jordan T",
+        "Thibault"
+    ],
+    "2": [
+        "Maria",
+        "Biben",
+        "Tiphaine"
+    ],
+    "3": [
+        "Carina",
+        "Youcef",
+        "Farouk E"
+    ],
+    "4": [
+        "Bernard",
+        "Mouny",
+        "Farouk B"
+    ],
+    "5": [
+        "Maxime",
+        "Jordan D",
+        "Adlane"
+    ],
+    "6": [
+        "Morjane",
+        "Bart",
+        "Marwa"
     ]
 }

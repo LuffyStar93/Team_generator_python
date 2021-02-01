@@ -5,6 +5,7 @@ import datetime
 import random
 import sys
 import json
+import logging
 
 
 myfile = open(sys.argv[1],'r')
@@ -15,27 +16,29 @@ my_list = info[0].replace('\n', '').split(', ')
 nbr_student = len(my_list)
 i = 0
 default_data = {}
-# teams = [students[i:i+3] for i in range(0, nbr_student, nbr_by_group)]
-# print(teams)
+logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='info.log', encoding='utf-8', level=logging.DEBUG)
+
 
 
 def create_groups(students, nbr_by_group):
+        logging.warning('Start of Function')
         random.shuffle(my_list)
         groups = [students[i:i+nbr_by_group] for i in range(0, nbr_student, nbr_by_group)]
-        # default_data = {}
-        # print('groups', groups)
-        # print(groups)
         
+        logging.info('Generate groups')
         for group in groups:
-           
-            # print(group)
             default_data[groups.index(group)] = group 
-            # default_data.update({i+1 : group})
-            # print('default = ', default_data)
         return default_data
 
 default_data = create_groups(my_list, nbr_by_group)
-print('default=',default_data)
+
+logging.info('Groups generate succesfully !')
+
+print(default_data)
+
+logging.info('Creation of result in json file')
 
 with open('result.json', 'w') as fp:
     json.dump(default_data, fp, indent=4)
+
+logging.info('File generated succesfully !')
